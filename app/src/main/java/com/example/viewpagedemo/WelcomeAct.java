@@ -20,22 +20,8 @@ public class WelcomeAct extends Activity {
     private static final int Go_Home = 1000;
     private static final int Go_Guide = 1001;
 
-    private Handler mHandler = new Handler() {
-
-        @Override
-        public void handleMessage(Message msg) {
-            switch (msg.what) {
-                case Go_Home:
-                    goHome();
-                    break;
-                case Go_Guide:
-                    goGuide();
-                    break;
 
 
-            }
-        }
-    };
 
     private void goHome() {
         Intent i = new Intent(WelcomeAct.this, MainActivity.class);
@@ -73,4 +59,21 @@ public class WelcomeAct extends Activity {
         }
 
     }
+
+   private Handler mHandler = new Handler() {
+
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case Go_Home:
+                    goHome();
+                    break;
+                case Go_Guide:
+                    goGuide();
+                    break;
+
+
+            }
+        }
+    };
 }
